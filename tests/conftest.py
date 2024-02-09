@@ -1,9 +1,21 @@
 import pytest
-import requests
-from configuration import  SERVICE_URL2
+from random import randrange
+
+@pytest.fixture()
+def get_number():
+    return randrange(1, 1000, 5)
 
 
-@pytest.fixture(scope='function')
-def get_users():
-    response = requests.get(SERVICE_URL2)
-    return response
+def _calculate(a, b):
+    return a + b
+
+@pytest.fixture()
+def calculate():
+    return _calculate
+
+@pytest.fixture()
+def make_number():
+    print('gdghdhdjhdjf')
+    number = randrange(1, 100)
+    yield number
+    print(f'zolton {number}')
