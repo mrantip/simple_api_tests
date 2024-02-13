@@ -7,8 +7,11 @@ class Genders(Enum):
 
 
 class Statuses(Enum):
-    inactive = 'inactive'
-    active = 'active'
+    ACTIVE = 'ACTIVE'
+    BANNED = 'BANNED'
+    DELETED = 'DELETED'
+    INACTIVE = 'INACTIVE'
+    MERGED = 'MERGED'
 
 
 class UserErrors(Enum):

@@ -25,3 +25,7 @@ def test_an():
 ])
 def test_calculator(first_value, second_value, result, calculate):
     assert calculate(first_value, second_value) == result
+
+
+def test_fail():
+    assert 1 == 2
